@@ -1,0 +1,59 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+div#title{
+    text-align:center;
+    padding-bottom:50px;
+}
+
+div#animation{
+    min-height: 200px;
+}
+
+img.blobR{
+    background: url(/images/blobR.png);
+    background-size:100% 100%;
+    width:60px;
+    height:50px;
+}
+
+img.blobG{
+    background: url(/images/blobG.png);
+    background-size:100% 100%;
+    width:60px;
+    height:50px;
+}
+
+img.blobB{
+    background: url(/images/blobB.png);
+    background-size:100% 100%;
+    width:60px;
+    height:50px;
+}
+
+img.blobC{
+    background: url(/images/blobC.png);
+    background-size:100% 100%;
+    width:60px;
+    height:50px;
+}
+
+img.blobM{
+    background: url(/images/blobM.png);
+    background-size:100% 100%;
+    width:60px;
+    height:50px;
+}
+
+img.blobY{
+    background: url(/images/blobY.png);
+    background-size:100% 100%;
+    width:60px;
+    height:50px;
+}
