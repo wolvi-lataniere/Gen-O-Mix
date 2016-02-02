@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gen-O-Mix</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/jquery.jqplot.min.css'/>
+    <title><%= config.public.site_name %></title>
+    <link rel='stylesheet' href='<%=config.public.site_prefix %>stylesheets/style.css' />
+    <link rel='stylesheet' href='<%=config.public.site_prefix %>stylesheets/jquery.jqplot.min.css'/>
     
-    <script type="text/javascript" src="/javascripts/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.timer.js"></script>
-    <script type="text/javascript" src="/javascripts/anim.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="<%=config.public.site_prefix%>javascripts/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="<%=config.public.site_prefix%>javascripts/jquery.timer.js"></script>
+    <script type="text/javascript" src="<%=config.public.site_prefix%>javascripts/anim.js"></script>
+    <script type="text/javascript" src="<%=config.public.site_prefix%>javascripts/jquery.jqplot.min.js"></script>
   </head>
   <body>
     <div id='title'>
-    <h1>Gen-O-Mix</h1>
-    <p>Le logiciel de simulation de dérive génétique.</p>
+    <h1><%= config.public.site_name %></h1>
+    <p><%= lang.subtitle %>.</p>
     </div>
     <table style='width:100%'>
       <tr><td>
-	  <p><img src="/images/rewind_back.png" width="100px" height="100px" id="rewind"/><img src="/images/play.png" width="100px" height="100px" id="next"/><img src="/images/fast_forward.png" width='100px' height='100px' id="play" alt="Démarrer le mode automatique"/></p>
-	  <p>Nombre d'élément à chaque génération: <input type="text" id="pool_size" value="60"></input></p>
-	  <p>Nombre de pas: <input type="text" id="batch_size" value="100"></input></p>
-	  <input type="checkbox" id="random_mut" checked="false" onchange="show_hide_mutationrate(this.checked)">Ajouter des mutations aléatoires</input>
+	  <p><img src="<%=config.public.site_prefix%>images/rewind_back.png" width="100px" height="100px" id="rewind"/>
+		<img src="<%=config.public.site_prefix%>images/play.png" width="100px" height="100px" id="next"/>
+		<img src="<%=config.public.site_prefix%>images/fast_forward.png" width='100px' height='100px' id="play" alt="Démarrer le mode automatique"/>
+	  </p>
+	  <p><%= lang.pool_size %>: <input type="text" id="pool_size" value="60"></input></p>
+	  <p><%= lang.generation_count %>: <input type="text" id="batch_size" value="100"></input></p>
+	  <input type="checkbox" id="random_mut" checked="false" onchange="show_hide_mutationrate(this.checked)"><%= lang.add_random_mut %></input>
 	  <div id="mutation_rate_selection">
 	    <input type="range" id="random_rate" min="0" max="100" step="1" value="10" onchange="update_mutation_rate(this.value)"/></input><span id="mutation_rate">10%</span></div>
 	</td>
@@ -29,11 +32,14 @@
 	</td>
     </tr></table>
     
-    <p><h2>Génération : <span id='generation_num'></span></h2></p>
+    <p><h2><%= lang.generation %> : <span id='generation_num'></span></h2></p>
     <div id="animation"></div>
     <div id="credit">
-      <p>Programme réalisé par Aurélien VALADE.<br/>
-      Ce logiciel est distibué sous licence GPL.</p>
+      <p><%= lang.written_by %> Aurélien VALADE.<br/>
+	<%= lang.running_version %><%= config.gen_o_mix_version %><br/>
+	<%= lang.license %> <a href="<%= config.public.site_prefix %>/LICENSE">GPL v3</a>.<br/>
+	<a href="<%= lang.documentation_site %>"><%= lang.documentation_title %></a>
+      </p>
       </div>
   </body>
 </html>

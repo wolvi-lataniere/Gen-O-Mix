@@ -1,0 +1,19 @@
+{
+    "subtitle":"Le logiciel de simulation de dérive génétique",
+    "graphic":{
+	"title":"Evolution de la fréquence des allèles au cours des générations",
+	"xtitle":"Génération",
+	"ytitle":"Nombre d'individus"
+    },
+    "start_auto":"Démarrer le mode automatique",
+    "pause_auto":"Mettre en pause le mode automatique",
+    "generation":"Génération",
+    "pool_size":"Nombre d'élément à chaque génération ",
+    "generation_count":"Nombre de générations ",
+    "add_random_mut":"Ajouter des mutations aléatoires",
+    "written_by":"Programme réalisé par",
+    "license":"Ce logiciel est distribué sous license ",
+    "running_version":"Propulsé par Gen-O-Mix v",
+    "documentation_title":"Documentation",
+    "documentation_site":"https://github.com/wolvi-lataniere/Gen-O-Mix/wiki/Accueil"
+}

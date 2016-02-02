@@ -1,0 +1,19 @@
+{
+    "subtitle":"The genetic deviation simulation software",
+    "graphic":{
+	"title":"Alleles frequency evolution through generations",
+	"xtitle":"Generation",
+	"ytitle":"Subjects count"
+    },
+    "start_auto":"Start automatic mode",
+    "pause_auto":"Pause automatic mode",
+    "generation":"Generation",
+    "pool_size":"Generation pool size ",
+    "generation_count":"Generations count ",
+    "add_random_mut":"Add random mutations",
+    "written_by":"Programm written by",
+    "license":"This software is distributed under ",
+    "running_version":"Run by Gen-O-Mix v",
+    "documentation_title":"Documentation",
+    "documentation_site":"https://github.com/wolvi-lataniere/Gen-O-Mix/wiki"
+}
