@@ -19,20 +19,20 @@
 var express = require('express');
 var router = express.Router();
 var config = require('../config.json');
-var lang=require('../public'+config.public.lang_file);
+var lang=require('../public/'+config.public.lang_file);
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get(config.public.site_prefix, function(req, res, next) {
     res.render('index', {config: config, lang: lang });
 });
 
 /* Generate the Configuration from "public" part of the configuration file */
-router.get('/config.json', function(req, res){
+router.get(config.public.site_prefix+'config.json', function(req, res){
   res.json(config.public);
 });
 
 /* First generation creation */
-router.get('/first_generation', function(req, res){
+router.get(config.public.site_prefix+'first_generation', function(req, res){
     var supported_colors = req.query.colors;
     var generation_pool = req.query.pool;
 
@@ -56,7 +56,7 @@ router.get('/first_generation', function(req, res){
 
 
 /* Each next generation */
-router.get('/next_gen', function(req, res){
+router.get(config.public.site_prefix+'next_gen', function(req, res){
     var generation_pool = req.query.pool;
     var supported_colors = req.query.colors;
     var colors_count=supported_colors.length;

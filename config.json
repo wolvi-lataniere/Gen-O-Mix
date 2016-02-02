@@ -3,11 +3,11 @@
     "gen_o_mix_version":"1.0.0",
     "public":{
 	"site_prefix":"/",
-	"site_name":"Gen-O-Mix demo site",
+	"site_name":"Gen-O-Mix demo",
 	"default_elements_by_gen":"60",
 	"default_generations_count":"20",
 	"default_random_active":false,
 	"default_random_rate":10,
-	"lang_file":"/lang/fr.json"
+	"lang_file":"lang/en.json"
 	}
 }

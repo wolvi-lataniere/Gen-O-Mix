@@ -40,7 +40,7 @@ var lang_data;
 */
 $(function(){
     /* Load configuration */
-    $.getJSON("/config.json",
+    $.getJSON("config.json",
 	      function(data)
 	      {
 		  config = data;
