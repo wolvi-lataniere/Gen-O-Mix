@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <title>Documentation Gen-O-Mix</title>
+    <link rel='stylesheet' href='../stylesheets/style.css' />
+  </head>
+
+  <body>
+    <div id='title'>
+      <h1>Documentation Gen-O-Mix</h1>
+      <p>Comment utiliser le simulateur</p>
+    </div>
+
+    <p>
+      <a href="../">Retour au site</a>
+    </p>
+    
+    <h2 id='Index'>Sommaire</h2>
+    <ul>
+      <li><a href='#Installation'>I. Installation</a></li>
+      <li><a href='#Configuring'>II. Configuration du serveur</a></li>
+      <li><a href='#RunningSimulation'>III. Effectuer une simulation</a>
+	<ul>
+	  <li><a href='#InterfaceDesc'>III.1. Description de l'interface</a></li>
+	  <li><a href='#FastStart'>III.2. Démarrer la simulation</a></li>
+	</ul></li>
+    </ul>
+    
+    <h2 id='Installation'>I. Installation</h2>
+    <p>Gen-O-Mix est un logiciel en ligne basé sur <a href='http://nodejs.org'>Node.JS</a>. Une partie du code est exécutée sur un serveru (service web, générateur de sujets aléatoires...) et doit par conséquent être installé si vous désirez l'utiliser sur votre propre servuer.<br/>
+      Pour ce faire, vous devez simplement télécharger le code source depuis <a href='http://github.com/wolvi-lataniere/Gen-O-Mix/'>le dépôt de code GIT</a>.
+    </p>
+    <p>Une fois que vous avez le code installé sur votre machine, il ne vous reste qu'à lancer la commande</p>
+    <div class='code'>node bin/www</div>
+    <p>Vous pouvez ensuite vous connecter à votre serveur au travers de votre navigateur web en tappant l'URL <span class='code'>http://<span style="font-style:italic">votre_address_IP</span>:3000/</span></p>
+
+    <h2 id='Configuring'>II. Configuration du serveur</h2>
+    <div class='todo'>
+      *** TODO: Expliquer les différents champs ***
+    </div>
+
+    <h2 id='RunningSimulation'>III. Effectuer une simulation</h2>
+    <p style='text-align:center;'><img src='../images/Gen-O-Mix-FR-Initial.png' alt='Simulator organisation' style='width:80%'/><br/>
+      <span class='legend'>Interface Gen-O-Mix</span></p>
+    <h3 id='InterfaceDesc'>III.1. Description de l'interface</h3>
+    <p>
+      <ol>
+	<li><span class='item' style='background-color:#f38d8d;'>Réinitialiser la simulation :</span> Ce bouton permet de réinitialiser la simulation en effaçant les résultats des précédentes générations,</li>
+	<li><span class='item' style='background-color:#8d9bf3;'>Simuler la prochaine génération :</span> Selon l'état actuel de la simulation:
+	  <ul>
+	    <li><span class='item'>Simulation non initialisée :</span> Génère la première génération composée d'un nombre égal d'individus pour chaque allèle.</li>
+	    <li><span class='item'>Simulation déjà initialisée :</span> Génère une nouvelle génération à partir de couples pris au hasard parmi les membres acifs de la génération actuelle.</li>
+	</ul></li>
+	<li><span class='item' style='background-color:#aff38d;'>Démarrage de la simulation automatique :</span> Démarre la simulation automatique en générant une nouvelle génération toutes les secondes jusqu'à atteindre la génération indiquée dans <span class='item'>Nombre de générations</span>.</li>
+	<li><span class='item' style='background-color:#6749ff;'>Paramétrage de la simulation :</span> Configuration dynamique de la simulation :
+	  <ol>
+	    <li><span class='item'>Nombre d'élément à chaque génération :</span> Configure le nombre d'individus à générer pour la/les prochaine(s) génération(s) : actif en mode simple pas ou automatique,</li>
+	    <li><span class='item'>Nombre de générations :</span> Nombre de générations à simuler en mode automatique.</li>
+	    <li><span class='item'>Ajouter des mutations aléatoires :</span> Si coché, cette case permet d'ajouter des mutation au cours de la nouvelle génération (et donc de voir des enfants exprimer des allèles qui ne dépendent pas de celles présentes chez les parents),<br/>
+	      lorsque cette case est cochée, un curseur permet de régler le taux de mutation, en pourcentage de probabilité d'avoir une mutation lors de la prochaine génération.</li>
+	  </ol>
+	</li>
+	<li><span class='item' style='background-color:#e88df3;'>Graphique d'évolution de la population :</span> Graphique indiquant l'évolution du nombre d'individus pour chaque allèle au cours des générations (les allèles sont repérées par les mêmes couleurs que celles des blobs),</li>
+	<li><span class='item' style='background-color:#f4ff49;'>Numéro de la dernière génération :</span> Numéro de la dernière génération simulée</li>
+	<li><span class='item' style='background-color:#8df2f3;'>Individus de la dernière génération :</span> Représentation graphique de la dernière génération simulée à partir de blobs de couleurs.<br/>
+	<span class='item' style='color:red;'>Note : Il est possible, en mode pas-à-pas, de simuler la sélection naturelle (mort d'individus avant leur reproduction au cours d'une génération) en cliquant sur les individus qui possèdent un allèle désavantageux dans un milieu donné. </span></li>
+	
+      </ol>
+    </p>
+    <h3 id='FastStart'>III.2. Démarrer la simulation</h3>
+    <p>
+      Pour effectuer une simulation rapide :
+      <ol>
+	<li>Sélectionnez le nombre d'individus à générer à chaque générations, ainsi que le nombre de générations que vous voulez simuler à partir de la zone <span class='item' style='background-color:#6749ff;'>Paramétrage de la simulation</span>,</li>
+	<li>Démarrez la simulation en mode "automatique" avec le bouton <span class='item' style='background-color:#aff38d;'>Démarrage de la simulation automatique</span></li>
+      </ol>
+    </p>
+  </body>
+</html>

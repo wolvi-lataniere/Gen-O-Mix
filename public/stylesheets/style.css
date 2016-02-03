@@ -1,10 +1,43 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+div.todo{
+    font-size:26px;
+    background-color:#F08080;
+    text-align:center;
+    border:1px dashed red;
+}
+
+div.code{
+    border:1px dashed #000000;
+    background-color: #A0A0A0;
+    margin:10px 10px 10px 10px;
+    padding:10px 10px 10px 10px;
+    font: 12px;
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+
+span.code{
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+
+span.item{
+    padding:1px 1px 1px 1px;
+    margin:1px 1px 1px 1px;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+span.legend{
+    text-decoration:underline;
+    font-weight:bold;
+    font-size:14px;
 }
 
 div#title{
